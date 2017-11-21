@@ -20,7 +20,15 @@ class HistoryController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+<<<<<<< HEAD
         self.navigationItem.rightBarButtonItem = self.editButtonItem
+=======
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        // Hide navigation controller
+        super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = true
+>>>>>>> InfrastructureSetup
     }
 
     override func didReceiveMemoryWarning() {
