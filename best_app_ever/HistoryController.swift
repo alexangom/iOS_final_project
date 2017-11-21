@@ -10,14 +10,17 @@ import UIKit
 
 class HistoryController: UITableViewController {
 
+    var activities = [Activity]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadActivityLog()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,23 +32,25 @@ class HistoryController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return activities.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "activityEntry", for: indexPath) as? activityEntry else {
+            fatalError("The dequeued cell is not an instance of activityEntry.")
+        }
+        let activity = activities[indexPath.row]
+        cell.feelingLabel.text = "You were feeling \(String(activity.feelNum)) out of 10"
+        cell.activityLabel.text = "because you \(activity.activityName)"
+        cell.emojiLabel?.text = activity.emoji
+        
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -91,5 +96,11 @@ class HistoryController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func loadActivityLog() {
+        let activity1 = Activity(fn: 7, actN: "ate cheese", emo: "😀", ts: Date())
+        let activity2 = Activity(fn: 2, actN: "failed my midterm", emo: "💩", ts: Date())
+        activities += [activity1, activity2]
+    }
 
 }

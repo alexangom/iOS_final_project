@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		037EC9201FC3A635000B003B /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037EC91F1FC3A635000B003B /* Activity.swift */; };
+		037EC9221FC3AC54000B003B /* activityEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037EC9211FC3AC54000B003B /* activityEntry.swift */; };
 		F9812EC51FC1EDEC001BBD8F /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9812EC41FC1EDEC001BBD8F /* ProfileController.swift */; };
 		F9812ECC1FC1EF84001BBD8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9812ECA1FC1EF84001BBD8F /* Main.storyboard */; };
 		F9812ECE1FC1EFCF001BBD8F /* HistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9812ECD1FC1EFCF001BBD8F /* HistoryController.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		037EC91F1FC3A635000B003B /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		037EC9211FC3AC54000B003B /* activityEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = activityEntry.swift; sourceTree = "<group>"; };
 		F9812EC41FC1EDEC001BBD8F /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		F9812ECB1FC1EF84001BBD8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F9812ECD1FC1EFCF001BBD8F /* HistoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryController.swift; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 			children = (
 				F9B092051FC12A10000357EC /* Models */,
 				F9B091DA1FBA7C2E000357EC /* AppDelegate.swift */,
+				037EC9211FC3AC54000B003B /* activityEntry.swift */,
 				F9B091DC1FBA7C2E000357EC /* HomeController.swift */,
 				F9812ECD1FC1EFCF001BBD8F /* HistoryController.swift */,
 				F9812ECF1FC1F008001BBD8F /* QuestionareeController.swift */,
@@ -133,6 +138,7 @@
 				F9B091FF1FC12785000357EC /* Diagnose.swift */,
 				F9B092011FC12796000357EC /* Monitoring.swift */,
 				F9B092031FC12811000357EC /* DataManagment.swift */,
+				037EC91F1FC3A635000B003B /* Activity.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -248,10 +254,12 @@
 				F9812ECE1FC1EFCF001BBD8F /* HistoryController.swift in Sources */,
 				F9B092021FC12796000357EC /* Monitoring.swift in Sources */,
 				F9812ED21FC1F0DC001BBD8F /* ProfileEditController.swift in Sources */,
+				037EC9221FC3AC54000B003B /* activityEntry.swift in Sources */,
 				F9B091E31FBA7C2E000357EC /* best_app_ever.xcdatamodeld in Sources */,
 				F9812ED41FC1F0F0001BBD8F /* PasswordEditController.swift in Sources */,
 				F9B092001FC12785000357EC /* Diagnose.swift in Sources */,
 				F9812ED01FC1F008001BBD8F /* QuestionareeController.swift in Sources */,
+				037EC9201FC3A635000B003B /* Activity.swift in Sources */,
 				F9812EC51FC1EDEC001BBD8F /* ProfileController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
