@@ -198,6 +198,63 @@
             </objects>
             <point key="canvasLocation" x="3384" y="1399"/>
         </scene>
+        <!--Login Controller-->
+        <scene sceneID="Ynt-Ze-sL3">
+            <objects>
+                <viewController id="i2c-jq-h9Z" customClass="LoginController" customModule="best_app_ever" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CoJ-eo-Y6H"/>
+                        <viewControllerLayoutGuide type="bottom" id="fsH-Zv-SNl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zIZ-k1-5oE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="REv-SK-Vzz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1239" y="907"/>
+        </scene>
+        <!--Launch Controller-->
+        <scene sceneID="Obm-PH-eud">
+            <objects>
+                <viewController storyboardIdentifier="LaunchController" id="VbA-kw-2ah" customClass="LaunchController" customModule="best_app_ever" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4uo-Pz-Hcf"/>
+                        <viewControllerLayoutGuide type="bottom" id="hxo-sR-Rob"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CDi-bh-hhc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Testing Launch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oKj-Ng-UfP">
+                                <rect key="frame" x="129" y="251" width="117" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OeQ-pi-Tlh">
+                                <rect key="frame" x="98" y="542" width="178" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="0cN-JQ-E0L" kind="show" id="WBu-Vv-zmb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gHp-Hb-T8a"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jen-c4-B8Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1216.8" y="-880.20989505247383"/>
+        </scene>
         <!--History-->
         <scene sceneID="Oj8-Ec-dJe">
             <objects>
@@ -237,7 +294,7 @@
         <!--Home-->
         <scene sceneID="gj9-NO-rLd">
             <objects>
-                <viewController id="h1c-Hd-9JS" customClass="HomeController" customModule="best_app_ever" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" id="h1c-Hd-9JS" customClass="HomeController" customModule="best_app_ever" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JhS-WM-qfD"/>
                         <viewControllerLayoutGuide type="bottom" id="gF0-kB-g5Y"/>
@@ -306,6 +363,24 @@
             </objects>
             <point key="canvasLocation" x="3386" y="-93"/>
         </scene>
+        <!--Result Controller-->
+        <scene sceneID="yX2-MC-Rxx">
+            <objects>
+                <viewController id="THa-Hd-Qvp" customClass="ResultController" customModule="best_app_ever" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Pm2-yj-2WF"/>
+                        <viewControllerLayoutGuide type="bottom" id="WLb-eh-ASH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zXw-Pe-XTW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q7Z-YL-iop" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4343" y="-93"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qj3-9L-niM">
             <objects>
@@ -315,17 +390,17 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="0cN-JQ-E0L" kind="relationship" relationship="rootViewController" id="Y8G-j3-TYl"/>
+                        <segue destination="VbA-kw-2ah" kind="relationship" relationship="rootViewController" id="BGN-J0-vvb"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oAf-pv-5WD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="551" y="-93"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Bar Controller-->
         <scene sceneID="gJE-6U-ojr">
             <objects>
-                <tabBarController id="0cN-JQ-E0L" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="BarController" id="0cN-JQ-E0L" customClass="BarController" customModule="best_app_ever" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="5nX-Uk-ta6"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="DFz-Px-fXC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>

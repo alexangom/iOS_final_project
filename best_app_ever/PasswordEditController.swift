@@ -14,6 +14,10 @@ class PasswordEditController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        // unhide navigation controller
+        super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,5 +35,6 @@ class PasswordEditController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
 
 }

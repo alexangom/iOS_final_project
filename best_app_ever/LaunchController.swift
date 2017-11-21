@@ -1,21 +1,31 @@
 //
-//  ProfileController.swift
+//  LaunchController.swift
 //  best_app_ever
 //
-//  Created by Alexan Gomez on 11/19/17.
+//  Created by Alexan Gomez on 11/20/17.
 //  Copyright © 2017 iOS Class. All rights reserved.
 //
 
 import UIKit
 
-class ProfileController: UIViewController {
-
+class LaunchController: UIViewController {
+    
+    let coreData = DataManagment()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-       
+
+        let firtTime = coreData.checkUserFirstTime()
+        if (firtTime == true){
+            // Core data change user variable first time to false
+            coreData.userFirstTime = false
+        }else{
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let homeVC = storyBoard.instantiateViewController(withIdentifier: "BarController") as! BarController
+            self.navigationController?.pushViewController(homeVC, animated: true)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,16 +43,5 @@ class ProfileController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
-    
-    // Hide navigation controller
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        // Hide the navigation bar on the this view controller
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
-    }
-
-    
 
 }
