@@ -1,24 +1,29 @@
 //
-//  SignupController.swift
+//  LaunchController.swift
 //  best_app_ever
 //
-//  Created by Bharathiraja Nagappan on 11/21/17.
+//  Created by Alexan Gomez on 11/21/17.
 //  Copyright © 2017 iOS Class. All rights reserved.
 //
 
 import UIKit
 
-class SignupController: UIViewController {
+let user = User()
+
+class LaunchController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        // Show navigation bar
-        super.viewDidLoad()
-        self.navigationController?.isNavigationBarHidden = false
-    
+        // Check if this the firt time user uses the app
+        if(user.userFirstTime == false){
+            user.checkUserFirstTime()
+            let loginController = self.storyboard?.instantiateViewController(withIdentifier: "LoginController") as! LoginController
+            self.navigationController?.pushViewController(loginController, animated: true)
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,14 +32,6 @@ class SignupController: UIViewController {
     }
     
 
-    @IBAction func signup(_ sender: Any) {
-        // Check user credentials with core data
-        
-        // Go to main app
-        performSegue(withIdentifier: "GoMainSignup", sender: nil)
-    }
-    
-    
     /*
     // MARK: - Navigation
 
