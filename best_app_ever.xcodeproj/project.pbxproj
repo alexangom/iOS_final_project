@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		037EC9201FC3A635000B003B /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037EC91F1FC3A635000B003B /* Activity.swift */; };
 		037EC9221FC3AC54000B003B /* activityEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037EC9211FC3AC54000B003B /* activityEntry.swift */; };
+		0E06F3FE1FC5343B008EF860 /* QuestionaireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E06F3FD1FC5343B008EF860 /* QuestionaireViewController.swift */; };
 		F9812EC51FC1EDEC001BBD8F /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9812EC41FC1EDEC001BBD8F /* ProfileController.swift */; };
 		F9812ECC1FC1EF84001BBD8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9812ECA1FC1EF84001BBD8F /* Main.storyboard */; };
 		F9812ECE1FC1EFCF001BBD8F /* HistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9812ECD1FC1EFCF001BBD8F /* HistoryController.swift */; };
-		F9812ED01FC1F008001BBD8F /* QuestionareeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9812ECF1FC1F008001BBD8F /* QuestionareeController.swift */; };
 		F9812ED21FC1F0DC001BBD8F /* ProfileEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9812ED11FC1F0DC001BBD8F /* ProfileEditController.swift */; };
 		F9812ED41FC1F0F0001BBD8F /* PasswordEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9812ED31FC1F0F0001BBD8F /* PasswordEditController.swift */; };
 		F9812ED61FC1F27D001BBD8F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9812ED51FC1F27D001BBD8F /* Launch Screen.storyboard */; };
