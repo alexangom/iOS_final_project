@@ -14,10 +14,6 @@ class ProfileEditController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        // unhide navigation controller
-        super.viewDidLoad()
-        self.navigationController?.isNavigationBarHidden = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,5 +32,4 @@ class ProfileEditController: UIViewController {
     }
     */
 
-    
 }

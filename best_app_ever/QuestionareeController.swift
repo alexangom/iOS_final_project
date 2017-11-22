@@ -18,10 +18,6 @@ class QuestionareeController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
-        // unhide navigation controller
-        super.viewDidLoad()
-        self.navigationController?.isNavigationBarHidden = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -95,6 +91,5 @@ class QuestionareeController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
-   
+
 }
