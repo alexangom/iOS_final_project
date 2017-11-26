@@ -337,6 +337,66 @@
             </objects>
             <point key="canvasLocation" x="2464.8000000000002" y="-93.103448275862078"/>
         </scene>
+        <!--Test View Controller-->
+        <scene sceneID="wJ3-4r-7m3">
+            <objects>
+                <viewController id="xil-0N-3rp" customClass="TestViewController" customModule="best_app_ever" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oKu-fF-bFC"/>
+                        <viewControllerLayoutGuide type="bottom" id="1UI-79-J0C"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dPL-xu-lkL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jcw-os-wT0">
+                                <rect key="frame" x="153" y="469" width="69" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Save Data"/>
+                                <connections>
+                                    <action selector="saveData:" destination="xil-0N-3rp" eventType="touchUpInside" id="q9i-gy-e8f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hvd-rL-Cxr">
+                                <rect key="frame" x="140" y="326" width="95" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Check history"/>
+                                <connections>
+                                    <action selector="checkHistory:" destination="xil-0N-3rp" eventType="touchUpInside" id="PV5-Un-QLz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9aq-4n-bMf">
+                                <rect key="frame" x="147" y="172" width="80" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Create user"/>
+                                <connections>
+                                    <action selector="createUser:" destination="xil-0N-3rp" eventType="touchUpInside" id="foD-RB-G34"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="236-6H-L3y">
+                                <rect key="frame" x="134" y="234" width="106" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Get user profile"/>
+                                <connections>
+                                    <action selector="getUserProfile:" destination="xil-0N-3rp" eventType="touchUpInside" id="DaR-Kb-39z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4aI-EW-DkV">
+                                <rect key="frame" x="145" y="272" width="85" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Update user"/>
+                                <connections>
+                                    <action selector="updateUser:" destination="xil-0N-3rp" eventType="touchUpInside" id="kcO-fo-eGi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ere-DD-98O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-463" y="268"/>
+        </scene>
         <!--Launch Controller-->
         <scene sceneID="uKP-By-8at">
             <objects>
@@ -364,6 +424,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ES6-wR-4g2">
+                                <rect key="frame" x="172" y="162" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Test"/>
+                                <connections>
+                                    <segue destination="xil-0N-3rp" kind="show" id="d1W-jg-ru1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -387,7 +455,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oAf-pv-5WD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1278" y="990"/>
+            <point key="canvasLocation" x="-1282" y="1001"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="gJE-6U-ojr">
@@ -571,7 +639,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="nzv-n4-ncy"/>
+        <segue reference="Kbb-cW-NiH"/>
         <segue reference="iwq-9X-iK6"/>
     </inferredMetricsTieBreakers>
 </document>
