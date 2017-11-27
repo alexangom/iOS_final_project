@@ -20,7 +20,12 @@ class HomeController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+/*
+     Raja: I am trying to provide a segue so that if the user is not logged in it will take them to the login screen
+    override func viewDidAppear(_ animated: Bool) {
+        self.performSegue(withIdentifier: "LoginController", sender: self)
+    }
+*/
     // Josh needs to prepare for segue to History from here... note
 }
 

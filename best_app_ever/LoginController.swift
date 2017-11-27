@@ -10,6 +10,11 @@ import UIKit
 
 class LoginController: UIViewController {
 
+    @IBOutlet weak var userNameTextField: UITextField!
+    @IBOutlet weak var userPasswordTextField: UITextField!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +26,36 @@ class LoginController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func signInButton(_ sender: Any) {
+        
+        let userEmail = userNameTextField.text
+        let userPassword = userPasswordTextField.text
+        
+        //validate username and password for signin
+        let emailStored = UserDefaults.standard.string(forKey: "userEmail")
+        let passwordStored = UserDefaults.standard.string(forKey: "userPassword")
+        
+        if(emailStored == userEmail){
+            if(passwordStored == userPassword){
+                //login successful
+            
+                UserDefaults.standard.set(true, forKey: "isUserLoggedIn")
+                UserDefaults.standard.synchronize()
+                //dismiss login view
+                self.dismiss(animated: true, completion:nil)
+                
+            }
+        }
+        
+        
+    }
+    
+    @IBAction func registerButton(_ sender: Any) {
+        let SignupController =
+        self.storyboard?.instantiateViewController(withIdentifier: "SignupController") as! SignupController
+        
+        self.present(SignupController, animated: true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 
