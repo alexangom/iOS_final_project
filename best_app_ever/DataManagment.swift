@@ -6,6 +6,8 @@
 //  Copyright © 2017 iOS Class. All rights reserved.
 //
 
+// Raja sucks
+
 import Foundation
 import CoreData
 import UIKit
