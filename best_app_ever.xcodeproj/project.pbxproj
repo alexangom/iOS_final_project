@@ -12,6 +12,9 @@
 		0E06F3FE1FC5343B008EF860 /* QuestionaireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E06F3FD1FC5343B008EF860 /* QuestionaireViewController.swift */; };
 		35BBBD3D1FC544DC00118094 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BBBD3C1FC544DC00118094 /* LoginController.swift */; };
 		35BBBD3F1FC5450200118094 /* SignupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BBBD3E1FC5450200118094 /* SignupController.swift */; };
+		F944B0541FC5495400292D4F /* QuestionareTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F944B0531FC5495400292D4F /* QuestionareTableViewController.swift */; };
+		F944B0561FC54D4F00292D4F /* LaunchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F944B0551FC54D4F00292D4F /* LaunchController.swift */; };
+		F944B05A1FC7641400292D4F /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F944B0591FC7641400292D4F /* TestViewController.swift */; };
 		F9812EC51FC1EDEC001BBD8F /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9812EC41FC1EDEC001BBD8F /* ProfileController.swift */; };
 		F9812ECC1FC1EF84001BBD8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9812ECA1FC1EF84001BBD8F /* Main.storyboard */; };
 		F9812ECE1FC1EFCF001BBD8F /* HistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9812ECD1FC1EFCF001BBD8F /* HistoryController.swift */; };
@@ -46,6 +49,9 @@
 		0E06F3FD1FC5343B008EF860 /* QuestionaireViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionaireViewController.swift; sourceTree = "<group>"; };
 		35BBBD3C1FC544DC00118094 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		35BBBD3E1FC5450200118094 /* SignupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupController.swift; sourceTree = "<group>"; };
+		F944B0531FC5495400292D4F /* QuestionareTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionareTableViewController.swift; path = ../QuestionareTableViewController.swift; sourceTree = "<group>"; };
+		F944B0551FC54D4F00292D4F /* LaunchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchController.swift; sourceTree = "<group>"; };
+		F944B0591FC7641400292D4F /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		F9812EC41FC1EDEC001BBD8F /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		F9812ECB1FC1EF84001BBD8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F9812ECD1FC1EFCF001BBD8F /* HistoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryController.swift; sourceTree = "<group>"; };
@@ -109,15 +115,18 @@
 			children = (
 				F9B092051FC12A10000357EC /* Models */,
 				F9B091DA1FBA7C2E000357EC /* AppDelegate.swift */,
+				F944B0551FC54D4F00292D4F /* LaunchController.swift */,
 				037EC9211FC3AC54000B003B /* activityEntry.swift */,
 				F9B091DC1FBA7C2E000357EC /* HomeController.swift */,
 				F9812ECD1FC1EFCF001BBD8F /* HistoryController.swift */,
 				0E06F3FD1FC5343B008EF860 /* QuestionaireViewController.swift */,
+				F944B0531FC5495400292D4F /* QuestionareTableViewController.swift */,
 				F9812EC41FC1EDEC001BBD8F /* ProfileController.swift */,
 				F9812ED11FC1F0DC001BBD8F /* ProfileEditController.swift */,
 				F9812ED31FC1F0F0001BBD8F /* PasswordEditController.swift */,
 				35BBBD3C1FC544DC00118094 /* LoginController.swift */,
 				35BBBD3E1FC5450200118094 /* SignupController.swift */,
+				F944B0591FC7641400292D4F /* TestViewController.swift */,
 				F9812ECA1FC1EF84001BBD8F /* Main.storyboard */,
 				F9812ED51FC1F27D001BBD8F /* Launch Screen.storyboard */,
 				F9B091E41FBA7C2F000357EC /* Assets.xcassets */,
@@ -254,11 +263,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9B091FE1FC12726000357EC /* User.swift in Sources */,
+				F944B05A1FC7641400292D4F /* TestViewController.swift in Sources */,
 				F9B091DD1FBA7C2E000357EC /* HomeController.swift in Sources */,
 				F9B092041FC12811000357EC /* DataManagment.swift in Sources */,
 				F9B091DB1FBA7C2E000357EC /* AppDelegate.swift in Sources */,
 				35BBBD3D1FC544DC00118094 /* LoginController.swift in Sources */,
 				F9812ECE1FC1EFCF001BBD8F /* HistoryController.swift in Sources */,
+				F944B0541FC5495400292D4F /* QuestionareTableViewController.swift in Sources */,
 				F9B092021FC12796000357EC /* Monitoring.swift in Sources */,
 				0E06F3FE1FC5343B008EF860 /* QuestionaireViewController.swift in Sources */,
 				F9812ED21FC1F0DC001BBD8F /* ProfileEditController.swift in Sources */,
@@ -268,6 +279,7 @@
 				F9812ED41FC1F0F0001BBD8F /* PasswordEditController.swift in Sources */,
 				F9B092001FC12785000357EC /* Diagnose.swift in Sources */,
 				037EC9201FC3A635000B003B /* Activity.swift in Sources */,
+				F944B0561FC54D4F00292D4F /* LaunchController.swift in Sources */,
 				F9812EC51FC1EDEC001BBD8F /* ProfileController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

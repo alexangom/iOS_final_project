@@ -21,6 +21,11 @@ class SignupController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        // Show navigation bar
+        super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = false
+    
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,6 +33,7 @@ class SignupController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+<<<<<<< HEAD
     @IBAction func signUpButton(_ sender: Any) {
         
         //Make sure signup fields are not empty
@@ -114,6 +120,16 @@ class SignupController: UIViewController {
     @IBAction func cancelButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+=======
+
+    @IBAction func signup(_ sender: Any) {
+        // Check user credentials with core data
+        
+        // Go to main app
+        performSegue(withIdentifier: "GoMainSignup", sender: nil)
+    }
+    
+>>>>>>> master
     
     /*
     // MARK: - Navigation

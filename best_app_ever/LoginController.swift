@@ -17,8 +17,13 @@ class LoginController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+        
+        // if user is loged in will skip this view and perform segue to  move to main app
+        if(user.userLogedIIn == true){
+            performSegue(withIdentifier: "StartApp", sender: nil)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -66,4 +71,10 @@ class LoginController: UIViewController {
     }
     */
 
+    @IBAction func login(_ sender: Any) {
+        // Check user credentials with core data
+        
+        // Go to main app
+        performSegue(withIdentifier: "StartApp", sender: nil)
+    }
 }
