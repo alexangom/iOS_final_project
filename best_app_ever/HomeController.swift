@@ -20,8 +20,12 @@ class HomeController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         let history = dataManager.getHistoryScores()
-        let emoji = historyEmoji.toEmoji(newFeel: history[history.count-1])
-        lastStatus.text = emoji
+        if(history.count > 0){
+            let emoji = historyEmoji.toEmoji(newFeel: history[history.count-1])
+            lastStatus.text = emoji
+        }else{
+            lastStatus.text = "?"
+        }
     }
 
     override func didReceiveMemoryWarning() {
