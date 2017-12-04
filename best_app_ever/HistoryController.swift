@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import CoreData
 
 class HistoryController: UITableViewController {
 
     var activities = [Activity]()
+    var dataManager = DataManagment()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +38,7 @@ class HistoryController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return activities.count
+        return dataManager.getHistoryScores().count
     }
 
     
@@ -45,20 +47,18 @@ class HistoryController: UITableViewController {
             fatalError("The dequeued cell is not an instance of activityEntry.")
         }
         let activity = activities[indexPath.row]
+        let history = dataManager.getHistoryScores()
+        let dates = dataManager.getHistoryScoresDates()
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM/dd/yyyy"
+        let this_date = formatter.string(from: dates[indexPath.row])
         cell.feelingLabel.text = "You were feeling \(String(activity.feelNum)) out of 10"
-        cell.activityLabel.text = "because you \(activity.activityName)"
-        cell.emojiLabel?.text = activity.emoji
+        cell.activityLabel.text = "on \(this_date)"
+        cell.emojiLabel?.text = activity.toEmoji(newFeel: history[indexPath.row])
         
         return cell
     }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
 
     /*
     // Override to support editing the table view.
@@ -69,13 +69,6 @@ class HistoryController: UITableViewController {
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
     }
     */
 
@@ -98,9 +91,19 @@ class HistoryController: UITableViewController {
     */
     
     func loadActivityLog() {
-        let activity1 = Activity(fn: 7, actN: "ate cheese", emo: "😀", ts: Date())
-        let activity2 = Activity(fn: 2, actN: "failed my midterm", emo: "💩", ts: Date())
-        activities += [activity1, activity2]
+        let history = dataManager.getHistoryScores()
+        print(history)
+        
+        // TODO: Change this pre-populated data
+        for x in dataManager.getHistoryScores() {
+            activities += [Activity(fn: x, actN: "This is the date.", emo: "", ts: Date())]
+        }
+        
+        // let activity1 = Activity(fn: 7, actN: "ate cheese", emo: "😀", ts: Date())
+        // let activity2 = Activity(fn: 2, actN: "failed my midterm", emo: "💩", ts: Date())
+        
+        // TODO: Add new entry
+        //activities += [activity1, activity2]
     }
 
 }
