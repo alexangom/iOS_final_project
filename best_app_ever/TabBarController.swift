@@ -12,6 +12,8 @@ class TabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 
         // Do any additional setup after loading the view.
     }
@@ -21,7 +23,10 @@ class TabBarController: UITabBarController {
         // Dispose of any resources that can be recreated.
     }
     
-
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        self.tabBar.barTintColor = .blue
+//    }
     /*
     // MARK: - Navigation
 

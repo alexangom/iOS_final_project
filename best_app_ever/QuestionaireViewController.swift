@@ -12,6 +12,8 @@ let finalDataCore = DataManagment()
 class QuestionaireViewController: UIViewController {
     
     @IBOutlet weak var qLabel: UILabel!
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var finishButton: UIButton!
     
     var qNum = 0 // current question index
     var qList = [Question]()
@@ -21,13 +23,12 @@ class QuestionaireViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        finishButton.isHidden = true
         qList = [Question(questionStr: "Q1: Over the past two weeks, how often have you been bothered by sadness or depressed mood?"), Question(questionStr: "Q2: Over the past two weeks, how often have you been experienced loss of enjoyment in things that were once pleasurable?"), Question(questionStr: "Q3: Over the past two weeks, how often have you been bothered by trouble falling asleep, staying asleep, or sleeping too much?"), Question(questionStr: "Q4: Over the past two weeks, how often have you been bothered by feeling tired or having little energy?"), Question(questionStr: "Q5: Over the past two weeks, how often have you been bothered by poor appetite or overeating?") , Question(questionStr: "Q6: Over the past two weeks, how often have you been bothered by feeling bad about yourself?"), Question(questionStr: "Q7: Over the past two weeks, how often have you been bothered by trouble concentrating on things, such as reading the newspaper?"), Question(questionStr: "Q8: Over the past two weeks, how often have you been bothered by moving or speaking so slowly that other people could have noticed?"), Question(questionStr: "Q9: Over the past two weeks, how often have you been bothered by throughts that you would be better off dead or of hurting yourself in some way")]
         
         navigationItem.title = "Questionnaire"
         currentQ()
         tbc?.viewDidLoad()
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -54,16 +55,17 @@ class QuestionaireViewController: UIViewController {
             }))
             self.present(alert, animated: true, completion: nil)
             finalDataCore.saveScore(score: finalResult)
+            nextButton.isHidden = true
+            finishButton.isHidden = false
             
-            //TODO: segue to history
-            let HistoryController =
-                self.storyboard?.instantiateViewController(withIdentifier: "HistoryController") as! HistoryController
-            self.present(HistoryController, animated: true, completion: nil)
+//            //TODO: segue to history
+//            let TabBarController =
+//                self.storyboard?.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
+//            self.present(TabBarController, animated: true, completion: nil)
         }
     }
     
     @IBAction func nextButtonPressed(_ sender: Any) {
-        
         print("Next button in VC")
         currentSelected = myResponses.currentSelected
         print(currentSelected)
