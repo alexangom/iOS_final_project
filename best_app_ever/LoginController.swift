@@ -7,10 +7,13 @@
 //
 import UIKit
 
+var dataManagment1 = DataManagment()
+
 class LoginController: UIViewController {
     
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var userPasswordTextField: UITextField!
+    
     
     
     
@@ -24,6 +27,7 @@ class LoginController: UIViewController {
             performSegue(withIdentifier: "StartApp", sender: nil)
         } */
         // Do any additional setup after loading the view.
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -33,21 +37,29 @@ class LoginController: UIViewController {
     
     @IBAction func signInButton(_ sender: Any) {
         
-        let userEmail = userNameTextField.text
-        let userPassword = userPasswordTextField.text
+        let typedUserEmail = userNameTextField.text
+        let typedUserPassword = userPasswordTextField.text
         
-        //validate username and password for signin
-        let emailStored = UserDefaults.standard.string(forKey: "userEmail")
-        let passwordStored = UserDefaults.standard.string(forKey: "userPassword")
+        var userCredenetials = dataManagment1.getUserCredentials()
+       
+      
+        print(typedUserEmail)
+        print(typedUserPassword)
+        print(userCredenetials["username"])
+        print(userCredenetials["password"])
         
-        if(emailStored == userEmail){
-            if(passwordStored == userPassword){
+        if(userCredenetials["username"] == typedUserEmail){
+            if(userCredenetials["password"] == typedUserPassword){
                 //login successful
+                print("credentials match")
                 
-                UserDefaults.standard.set(true, forKey: "isUserLoggedIn")
+                performSegue(withIdentifier: "navigationController", sender: self)
+                
+                
+                /*UserDefaults.standard.set(true, forKey: "isUserLoggedIn")
                 UserDefaults.standard.synchronize()
                 //dismiss login view
-                self.dismiss(animated: true, completion:nil)
+                self.dismiss(animated: true, completion:nil)*/
                 
             }
         }

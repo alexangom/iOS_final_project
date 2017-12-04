@@ -9,26 +9,61 @@
 
 import UIKit
 
-class SignupController: UIViewController {
+
+
+class SignupController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+  
     
     @IBOutlet weak var firstNameField: UITextField!
     @IBOutlet weak var lastNameField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var birthday: UIDatePicker!
+    @IBOutlet weak var sex: UIPickerView!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var repeatPasswordField: UITextField!
     
     
+    
+    let userData = DataManagment()
+    var savedUserSex = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        sex.delegate = self
+        sex.dataSource = self
         // Do any additional setup after loading the view.
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    // user sex
+    let userSex = ["Male", "Female", "Other"]
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return userSex[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return userSex.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        savedUserSex = userSex[row]
+           print(savedUserSex)
+    }
+    
+ 
+    
+    //signup button
     @IBAction func signUpButton(_ sender: Any) {
         
         //Make sure signup fields are not empty
@@ -39,7 +74,7 @@ class SignupController: UIViewController {
             
             return
         }
-        
+    
         //validate password in the retype password field
         if ((passwordTextField.text?.elementsEqual(repeatPasswordField.text!))! != true) {
             
@@ -49,6 +84,8 @@ class SignupController: UIViewController {
             return
         }
         
+        
+        /*
         //Creates a progess bar so that users will know that something is happening
         let myProgress = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
         
@@ -57,20 +94,33 @@ class SignupController: UIViewController {
         
         myProgress.startAnimating() //starts the progess bar
         view.addSubview(myProgress) //adds it as part of the signup page
-        
+        */
         
         //store data locally
+        
         let userName = firstNameField.text
         let userLname = lastNameField.text
         let userEmail = emailTextField.text
         let userPassword = passwordTextField.text
+        let userBirthday = birthday.date
+        let userGender = savedUserSex
         
+           print(userGender)
+        
+        
+        userData.createUserProfile(name: userName!, lastName: userLname!, gender: userGender, birthday: userBirthday , username: userEmail!, password: userPassword!)
+     
+    
+        /* Old way of saving data into a variable
         UserDefaults.standard.set(userName, forKey: "userName")
         UserDefaults.standard.set(userLname, forKey: "userLname")
+         UserDefaults.standard.set(userName, forKey: "userBirthdayM")
+         UserDefaults.standard.set(userName, forKey: "userBirthdayD")
+         UserDefaults.standard.set(userName, forKey: "userBirthdayY")
         UserDefaults.standard.set(userEmail, forKey: "userEmail")
-        value(forKey: )
         UserDefaults.standard.set(userPassword, forKey: "userPassword")
         UserDefaults.standard.synchronize()
+        */
         
         //creates alert for user about successful signup and change view controller to login page
         let alertController = UIAlertController(title:"Alert", message: "Registration Completed. Thank You!", preferredStyle: .alert)
