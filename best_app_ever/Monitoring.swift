@@ -8,27 +8,34 @@
 
 import Foundation
 
+struct finalAnswer {
+    var currentSelected: Int// add value from TVC
+    var response: Int// add value to VC
+    
+    init() {
+        currentSelected = 0
+        response = 0
+    }
+    
+    mutating func selected(value:Int){
+        self.currentSelected = value
+    }
+    
+    mutating func add(value:Int) {
+        self.response += value
+    }
+}
+
 class Question {
     var questionStr: String?
-    var answers: [String]?
-    var selectedAnswerIndex: Int?
     
-    init(questionStr: String, answers: [String], selectedAnswerIndex: Int?) {
+    
+    init(questionStr: String) {
         self.questionStr = questionStr
-        self.answers = answers
-        self.selectedAnswerIndex = selectedAnswerIndex
     }
     
     func getquestionStr() -> String {
         return questionStr!
     }
     
-    func getAnswer() -> [String] {
-        return answers!
-    }
-    
-    func getIndex() -> Int {
-        return selectedAnswerIndex!
-    }
 }
-
