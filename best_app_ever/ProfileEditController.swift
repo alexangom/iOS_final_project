@@ -8,11 +8,29 @@
 
 import UIKit
 
-class ProfileEditController: UIViewController {
+var dataManagment3 = DataManagment()
+class ProfileEditController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    
 
+    @IBOutlet weak var editFirstName: UITextField!
+    @IBOutlet weak var editLastName: UITextField!
+    @IBOutlet weak var editBirthday: UIDatePicker!
+    @IBOutlet weak var editSex: UIPickerView!
+    
+    
+    var userCredenetials = dataManagment3.getUserProfile()
+    var userLoginInfo = dataManagment3.getUserCredentials()
+    
+    var newUserSex = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        editSex.delegate = self
+        editSex.dataSource = self
+        editFirstName.text = userCredenetials["name"]
+        editLastName.text = userCredenetials["lastname"]
         // Do any additional setup after loading the view.
     }
 
@@ -21,7 +39,74 @@ class ProfileEditController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    // user sex
+    let userSex = ["Male", "Female", "Other"]
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return userSex[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return userSex.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        newUserSex = userSex[row]
+        print(newUserSex)
+    }
+    
+    
+    
+    @IBAction func updateUserInfo(_ sender: Any) {
+        //Make sure edit fields are not empty
+        if (editFirstName.text?.isEmpty)! || (editLastName.text?.isEmpty)!  {
+            
+            //Display alert message
+            displayMessage(userMessage: "Oops your missing something.")
+            
+            return
+        }
+   
+        let userName = editFirstName.text
+        let userLname = editLastName.text
+        let userBirthday = editBirthday.date
+        let userGender = newUserSex
+        
+         dataManagment3.updatetUserProfile(name: userName! , lastname: userLname!, birthday: userBirthday, gender: userGender)
+       
+    }
+    
+    @IBAction func cancelUserInfoUpdate(_ sender: Any) {
+        let ProfileController =
+            self.storyboard?.instantiateViewController(withIdentifier: "ProfileController") as! ProfileController
+        self.present(ProfileController, animated: true, completion: nil)
+    }
+    
+    
+    //funciton to dispaly error message for user to acknowledge
+    func displayMessage(userMessage:String) -> Void{
+        DispatchQueue.main.async {
+            let alertController = UIAlertController(title:"Alert", message: userMessage, preferredStyle: .alert)
+            
+            let OKAction = UIAlertAction(title:"OK", style: .default)
+            {
+                (action:UIAlertAction!)in
+                //Code in this block will trigger when ok is pressed
+                print("ok button pressed")
+                DispatchQueue.main.async {
+                    self.dismiss(animated: true, completion: nil)
+                }
+            }
+            alertController.addAction(OKAction)
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
+    
+  
     /*
     // MARK: - Navigation
 
