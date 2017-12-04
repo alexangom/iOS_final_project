@@ -53,7 +53,7 @@ class HistoryController: UITableViewController {
         let formatter = DateFormatter()
         formatter.dateFormat = "MM/dd/yyyy"
         let this_date = formatter.string(from: dates[indexPath.row])
-        cell.feelingLabel.text = "You were feeling \(String(activity.feelNum)) out of 10"
+//        cell.feelingLabel.text = "You felt \(String(activity.feelNum)) out of 10"
         cell.activityLabel.text = "on \(this_date)"
         cell.emojiLabel?.text = activity.toEmoji(newFeel: history[indexPath.row])
         
