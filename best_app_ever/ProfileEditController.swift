@@ -77,13 +77,17 @@ class ProfileEditController: UIViewController, UIPickerViewDelegate, UIPickerVie
         let userGender = newUserSex
         
          dataManagment3.updatetUserProfile(name: userName! , lastname: userLname!, birthday: userBirthday, gender: userGender)
+        
+        let TabBarController =
+            self.storyboard?.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
+        self.present(TabBarController, animated: true, completion: nil)
        
     }
     
     @IBAction func cancelUserInfoUpdate(_ sender: Any) {
-        let ProfileController =
-            self.storyboard?.instantiateViewController(withIdentifier: "ProfileController") as! ProfileController
-        self.present(ProfileController, animated: true, completion: nil)
+        let TabBarController =
+            self.storyboard?.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
+        self.present(TabBarController, animated: true, completion: nil)
     }
     
     

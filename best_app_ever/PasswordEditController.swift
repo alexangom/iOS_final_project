@@ -43,8 +43,8 @@ class PasswordEditController: UIViewController {
                 
                 dataManagment4.updatetUserCredentials(username: userEmail!, password: typedNewPassword!)
                  displayMessage(userMessage: "Username/Password has been updated!")
-                let ProfileController =
-                    self.storyboard?.instantiateViewController(withIdentifier: "ProfileController") as! ProfileController
+                let TabBarController =
+                    self.storyboard?.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
             }
             else{
                 displayMessage(userMessage: "Oops your password does not match.")
@@ -61,9 +61,9 @@ class PasswordEditController: UIViewController {
     }
     
     @IBAction func cancelUpdatePassword(_ sender: Any) {
-        let ProfileController =
-            self.storyboard?.instantiateViewController(withIdentifier: "ProfileController") as! ProfileController
-        self.present(ProfileController, animated: true, completion: nil)
+        let TabBarController =
+            self.storyboard?.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
+        self.present(TabBarController, animated: true, completion: nil)
     }
     
     //funciton to dispaly error message for user to acknowledge

@@ -31,6 +31,7 @@
 		F9B092001FC12785000357EC /* Diagnose.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B091FF1FC12785000357EC /* Diagnose.swift */; };
 		F9B092021FC12796000357EC /* Monitoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B092011FC12796000357EC /* Monitoring.swift */; };
 		F9B092041FC12811000357EC /* DataManagment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B092031FC12811000357EC /* DataManagment.swift */; };
+		F9F01DD71FD51EE8001EE5F5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F01DD61FD51EE8001EE5F5 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		F9B091FF1FC12785000357EC /* Diagnose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Diagnose.swift; sourceTree = "<group>"; };
 		F9B092011FC12796000357EC /* Monitoring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Monitoring.swift; sourceTree = "<group>"; };
 		F9B092031FC12811000357EC /* DataManagment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManagment.swift; sourceTree = "<group>"; };
+		F9F01DD61FD51EE8001EE5F5 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				F944B0531FC5495400292D4F /* QuestionareTableViewController.swift */,
 				F9812EC41FC1EDEC001BBD8F /* ProfileController.swift */,
 				F9812ED11FC1F0DC001BBD8F /* ProfileEditController.swift */,
+				F9F01DD61FD51EE8001EE5F5 /* TabBarController.swift */,
 				F9812ED31FC1F0F0001BBD8F /* PasswordEditController.swift */,
 				35BBBD3C1FC544DC00118094 /* LoginController.swift */,
 				35BBBD3E1FC5450200118094 /* SignupController.swift */,
@@ -275,6 +278,7 @@
 				F9812ED21FC1F0DC001BBD8F /* ProfileEditController.swift in Sources */,
 				037EC9221FC3AC54000B003B /* activityEntry.swift in Sources */,
 				F9B091E31FBA7C2E000357EC /* best_app_ever.xcdatamodeld in Sources */,
+				F9F01DD71FD51EE8001EE5F5 /* TabBarController.swift in Sources */,
 				35BBBD3F1FC5450200118094 /* SignupController.swift in Sources */,
 				F9812ED41FC1F0F0001BBD8F /* PasswordEditController.swift in Sources */,
 				F9B092001FC12785000357EC /* Diagnose.swift in Sources */,

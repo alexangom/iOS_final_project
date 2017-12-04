@@ -56,7 +56,9 @@ class QuestionaireViewController: UIViewController {
             finalDataCore.saveScore(score: finalResult)
             
             //TODO: segue to history
-            // Code...
+            let HistoryController =
+                self.storyboard?.instantiateViewController(withIdentifier: "HistoryController") as! HistoryController
+            self.present(HistoryController, animated: true, completion: nil)
         }
     }
     
