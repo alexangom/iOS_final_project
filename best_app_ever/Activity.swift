@@ -32,4 +32,22 @@ class Activity {
         let sum = "Your last activity was \(activityName) on \(timestamp). It made you feel \(emoji)."
         return sum
     }
+    
+    // Convert numeric feeling to emoji
+    func toEmoji(newFeel : Int) -> String {
+        self.feelNum = newFeel
+        print(self.feelNum)
+        if self.feelNum <= 5 {
+            self.emoji = "😁"
+        } else if self.feelNum > 5 && self.feelNum <= 9 {
+            self.emoji = "🙂"
+        } else if self.feelNum > 9 && self.feelNum <= 14 {
+            self.emoji = "😒"
+        } else if self.feelNum > 14 && self.feelNum <= 19 {
+            self.emoji = "😢"
+        } else if self.feelNum >= 20 {
+            self.emoji = "😭"
+        }
+        return self.emoji
+    }
 }

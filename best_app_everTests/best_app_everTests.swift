@@ -21,16 +21,29 @@ class best_app_everTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testActivity() {
+        let nowDate = Date()
+        let newActivity = Activity(fn: 7, actN: "ate cheese", emo: "😀", ts: nowDate)
+        XCTAssert(newActivity.feelNum == 7, "Activity feeling number not correct")
+        XCTAssert(newActivity.activityName == "ate cheese", "Activity description not correct")
+        XCTAssert(newActivity.emoji == "😀", "Activity emjo not correct")
+        XCTAssert(newActivity.timestamp == nowDate, "Activity date not correct")
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    // Test for data manager commented out so we do not populate core data
+    /*
+    func testDataManager() {
+        // Test History Score
+        let DataManager = DataManagment()
+        DataManager.saveScore(score: 1)
+        XCTAssert(DataManager.getHistoryScores().last == 1, "\(DataManager.getHistoryScores()) is not 1")
+        DataManager.saveScore(score: 2)
+        XCTAssert(DataManager.getHistoryScores().last == 2, "\(DataManager.getHistoryScores()) is not 2")
+        
+        // Test User Profile
+        let bday = Date()
+        DataManager.createUserProfile(name: "Tester", lastName: "Person", gender: "Test", birthday: bday, username: "test_person", password: "password123")
+        
     }
-    
+    */
 }
