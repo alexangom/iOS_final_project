@@ -12,7 +12,7 @@ import CoreData
 class HomeController: UIViewController {
     var historyEmoji = Activity(fn: 0, actN: "", emo: "", ts: Date())
     
-    var dataManager7 = DataManagment()
+    var dataManager = DataManagment()
     
     
     @IBOutlet weak var lastStatus: UILabel!
@@ -20,7 +20,7 @@ class HomeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
- Updated upstream
+ 
         let history = dataManager.getHistoryScores()
         if(history.count > 0){
             let emoji = historyEmoji.toEmoji(newFeel: history[history.count-1])
@@ -28,8 +28,8 @@ class HomeController: UIViewController {
         }else{
             lastStatus.text = "?"
         }
-=======
-        
+
+        /*
         let history = dataManager7.getHistoryScores()
         if (history == []){
             let QuestionaireViewController =
@@ -39,10 +39,10 @@ class HomeController: UIViewController {
         print(history)
         let emoji = historyEmoji.toEmoji(newFeel: history[history.count-1])
         lastStatus.text = emoji
+ */
         
     }
->>>>>>> Stashed changes
-    }
+ 
 
        override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
